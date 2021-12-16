@@ -4,8 +4,8 @@ from pydantic import BaseSettings
 
 
 class Settings(BaseSettings):
-    host: str = "127.0.0.1"
-    port: int = 6432
+    host: str = "0.0.0.0"
+    port: int = 80
 
     debug: bool = False
 

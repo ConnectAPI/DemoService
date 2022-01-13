@@ -4,10 +4,17 @@ from pydantic import BaseSettings
 
 
 class Settings(BaseSettings):
-    host: str = "0.0.0.0"
-    port: int = 80
+    host: str = "127.0.0.1"
+    port: int = 8082
 
     debug: bool = False
+
+    class Config:
+        case_sensitive = False
+        fields = {
+            "host": {"env": "host"},
+            "port": {"env": "port"},
+        }
 
 
 @lru_cache

@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
 from core.settings import get_settings
-from routes import math_router, random_router
+from routes import math_router, random_router, test_router
 
 settings = get_settings()
 app = FastAPI(
@@ -14,4 +14,4 @@ app = FastAPI(
 
 app.include_router(math_router)
 app.include_router(random_router)
-
+app.include_router(test_router)

@@ -28,3 +28,6 @@ $> pytest
 - random
   - range (/random/range) returns random number between A and B
   - secure (/random/secure) returns random string with length N
+- test
+  method, types, optional, required, query, body, form, header, cookie, path, responses
+  ...
